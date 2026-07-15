@@ -14,5 +14,5 @@ jobs:
       - name: Lista de arquivos
         run: ls ${{ github.worksapce }}
       - name: Status
-       crun: echo "Status ${{ job.status }}."
+        run: echo "Status ${{ job.status }}."
       
