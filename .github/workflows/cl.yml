@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: action/checkout@v5
       - name: Lista de arquivos
-        run: ls ${{ github.worksapce }}
+        run: ls ${{ github.workspace }}
       - name: Status
         run: echo "Status ${{ job.status }}."
       
