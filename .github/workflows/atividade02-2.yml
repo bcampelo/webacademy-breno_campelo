@@ -8,9 +8,13 @@ jobs:
   primeiro-job:
     runs-on: ubuntu-latest
     steps:
-        - run: date
-        - run: uname -a
-        - run: git --version
-        - run: cat README.md
-        - run: ls
-
+      - run: echo "Segundo passo"
+      - name: Checkout
+        uses: actions/checkout@v5
+      - run: date
+      - run: uname -a
+      - run: git --version
+      - run: pwd
+      - run: ls -la
+      - run: cat README.md
+      - run: ls
