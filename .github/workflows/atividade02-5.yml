@@ -1,0 +1,35 @@
+name: Quinto workflow
+
+on:
+  push:
+
+jobs:
+  primeiro-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Exibir data
+        run: date
+
+      - name: Exibir versão do Git
+        run: git --version
+
+  segundo-job:
+    needs: primeiro-job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Verificar README.md
+        run: test -f README.md
+
+      - name: Verificar LICENSE
+        run: test -f LICENSE
+
+      - name: Verificar .gitignore
+        run: test -f .gitignore
