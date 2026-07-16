@@ -10,7 +10,7 @@ jobs:
     steps:
       - run: echo "Primeiro passo"
       - name: Checkout
-        uses: action/checkout@v5
+        uses: actions/checkout@v5
       - name: Lista de arquivos
         run: ls ${{ github.workspace }}
       - name: Status
