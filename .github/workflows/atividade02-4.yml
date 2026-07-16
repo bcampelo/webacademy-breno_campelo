@@ -1,0 +1,24 @@
+name: Quarto workflow
+
+on:
+  push:
+
+jobs:
+
+  primeiro-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Segundo passo"
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Verificar README
+        run: test -f README.md
+
+      - name: Verificar LICENSE
+        run: test -f LICENSE
+
+      - name: Verificar .gitignore
+        run: test -f .gitignore
+          
+
